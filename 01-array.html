@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Time:<input type="text" id="time"><button onclick="getTime()">ok</button> -->
+    <p id="demo">
+
+    </p>
+    <script>
+        // var names = ["john", "barry", "andy"];
+        // names[0] = "mori";
+        // document.getElementById("demo").innerText = names;
+
+
+        // function getage(){
+        //             var age=document.getElementById("age").value;
+        //             document.getElementById('demo').innerText=(age<18) ? "too young": "old enough"
+        // }
+
+
+        // document.getElementById("demo");
+
+        // function getage() {
+        //     var age = document.getElementById("age").value;
+        //     if (age < 18) {
+        //         d.innerText = "Too young";
+        //     } else {
+        //         d.innerText = "old enough";
+        //     }
+        // }
+
+
+        // var d = document.getElementById("demo");
+        // var t = document.getElementById("time");
+        // var prompt;
+
+        // function getTime() {
+        //     var time = t.value;
+        //     if (time < 10)
+        //         prompt = "good morning";
+        //     else if (time < 20)
+        //         prompt "good day";
+        //     else
+        //         prompt = "good evening";
+
+        //     d.innerText = prompt;
+        // }
+
+
+        // var day;
+        // var d = new Date().getDay();
+        // switch (d) {
+        //     case 0:
+        //         day = "sunday"
+        //         break;
+        //     case 1:
+        //         day = "monday"
+        //         break;
+        //     case 2:
+        //         day = "tuesday"
+        //         break;
+        //     case 3:
+        //         day = "wednesday"
+        //         break;
+        //     case 4:
+        //         day = "thursday"
+        //         break;
+        //     case 5:
+        //         day = "friday"
+        //         break;
+        //     case 6:
+        //         day = "saturday"
+        //         break;
+        //     default:
+        //         day = "unkown!"
+        // }
+        // document.getElementById("demo").innerText = day;
+
+
+        // var text="";
+        // var names=["taha","soroosh","arash","helia","mostafa","ali","mmd"]
+        // for (let i = 0; i < names.length; i++) {
+        //     text += names[i]+"<br>";
+
+        // }
+        // document.getElementById("demo").innerHTML=text;
+
+        // var total = "";
+
+        // for (let i = 1; i <= 10; i++) {
+        //     // total=total+i+"<br>";
+        //     total += i+"<br>";
+        //     document.getElementById("demo").innerHTML = total;
+
+        // }
+
+
+        // var total = "";
+
+        // for (let i = 2; i <= 10; i++) {
+        //     // total=total+i+"<br>";
+        //     total += i+"<br>";
+        //     document.getElementById("demo").innerHTML = total;
+
+        // }
+
+
+        var total = "";
+
+        for (let i = 1; i <= 10; i+=2) {
+            //total = total + i + "<br>";
+            total += i + "<br>";
+            document.getElementById("demo").innerHTML = total;
+
+        }
+    </script>
+
+</body>
+
+</html>
