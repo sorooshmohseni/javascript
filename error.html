@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" name="" id="input">
+        <button type="button" onclick="validation()">commit</button>
+        <p id="demo"></p>
+    </form>
+    <script>
+        let message, input;
+
+        function validation() {
+            message = document.getElementById("demo");
+            message.innerHTML = "";
+            input = document.getElementById("input").value;
+            try {
+                if (input == '') throw "empty"
+                if (isNaN(input)) throw "not a number";
+                input = Number(input);
+                if (input > 5) throw "to low";
+                if (input > 10) throw "to high";
+
+            } catch (ex) {
+                message.innerHTML = "Input is" + ex;
+
+            }
+        }
+    </script>
+
+
+    <!-- <p id="demo"></p>
+    <script>
+        try {
+            alert("hi");
+        } catch (error) {
+            document.getElementById("demo").innerHTML=error.message;
+        }
+        finally{
+            alert("from finally")
+
+        }
+        </script> -->
+</body>
+
+</html>

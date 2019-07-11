@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+}
+.left{
+    flex: 30%;
+    padding: 15px 0;
+    background: #f1f1f1;
+}
+.right{
+    flex: 70%;
+    padding: 15px;
+    background: #f6f6f6;
+}
+.menu{
+    list-style-type: none;
+}
+.left>h2, .right>h2{
+    margin: 0.7rem
+}
+li>a{
+    display: flex;
+    padding: .7rem;
+    text-decoration: none;
+}
+li>a:hover{
+    background: #ccc;
+}
+.search{
+    padding: .7rem;
+    width: 100%;
+    font-size: 1.2rem;
+    border: 1px solid #f1f1f1;
+}
