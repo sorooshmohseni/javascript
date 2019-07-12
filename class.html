@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        class car{
+            constructor(brand){
+                this.carname=brand;
+            }
+        }
+        mycar=new car("Pride");
+        tomCar=new car("Mostang");
+        document.getElementById("demo").innerText=mycar.carname;
+        document.getElementById("demo1").innerText=tomCar.carname;
+        </script>
+</body>
+</html>
