@@ -1,94 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        body {
-            font-family: sans-serif;
+    .overlay{
+        height: 100%;
+        width: 0%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, .9);
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .overlay-content{
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 3px;
+    }
+    .overlay a{
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition:0.3s;
+    }
+    .overlay a:hover, .overlay a:focus{
+        color: #f1f1f1;
+    }
+    .overlay, .closebtn{
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+    }
+    span{
+        font-size: 30px;
+        cursor: pointer;
+    }
+    @media(max-height:450px){
+        .overlay a{font-size: 20px}
+        .overlay .closebtn{
+            font-size: 40px;
+            top: 15px;
+            right: 35px;
         }
-
-        .tab {
-            overflow: hidden;
-            border: 1px solid #333;
-            background: #f1f1f1;
-        }
-
-        .tab button {
-            outline: none;
-            border: none;
-            float: left;
-            background-color: inherit;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 1.2rem;
-        }
-
-        .tab button:hover {
-            background: #333;
-            color: white;
-        }
-
-        .tb>button.active {
-            background: #333;
-            color: white;
-        }
+    }
     </style>
 </head>
-
 <body>
-    <div class="tab">
-        <button class="tablinks " id="defaultTab" onclick="openCity(event, 'tehran')">tehran</button>
-        <button class="tablinks" onclick="openCity(event, 'karaj')">karaj</button>
-        <button class="tablinks" onclick="openCity(event, 'sari')">sari</button>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closenav()">&times; </a>
+        <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
     </div>
-    <div id="tehran" class="content">
-        <h1>tehran iran</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque impedit quia tempora, quae blanditiis, dicta
-            tenetur maiores ut unde quam, accusantium consequuntur eum libero exercitationem magnam repellat est
-            explicabo aspernatur.</p>
-
-    </div>
-    <div id="karaj" class="content">
-        <h1>karaj iran</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, iure vero. Autem provident alias veniam
-            excepturi debitis delectus ratione voluptatibus voluptatem, iure id nesciunt, in quam est dolor odit sit!
-        </p>
-    </div>
-    <div id="sari" class="content">
-        <h1>sari iran</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt eaque veritatis debitis similique ipsum
-            ullam veniam alias, magni temporibus qui error porro cum accusamus unde cupiditate quam soluta, excepturi
-            consequatur.</p>
-    </div>
+    <h2>Personal Site</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae natus possimus et architecto nemo, sequi fuga culpa, ipsa molestias, dicta quibusdam incidunt aperiam aliquam neque dolores vitae nostrum laborum?</p>
+    <span onclick="opennav()">&#9776; open</span>
     <script>
-        function openCity(evt, cityName) {
-            let i = 0,
-                tabContent, tablinks;
-            tabContent = document.getElementsByClassName("content");
-            // console.log(tabContent)
-            for (i = 0; i < tabContent.length; i++) {
-                tabContent[i].style.display = "none";
-
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            // console.log(tablinks);
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "")
-
-
-
-            }
-            document.getElementById(cityName).style.display = "block"
-            evt.currentTarget.className += ' active';
-            console.log(tablinks);
-        }
-        document.getElementById("defaultTab").click()
+    function opennav(){
+        document.getElementById("myNav").style.width="100%";
+    }
+    function closenav(){
+        document.getElementById("myNav").style.width="0%";
+    }
     </script>
 </body>
-
 </html>
