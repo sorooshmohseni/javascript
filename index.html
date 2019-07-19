@@ -1,81 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-    .overlay{
-        height: 100%;
-        width: 0%;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, .9);
-        overflow: hidden;
-        transition: 0.5s;
-    }
-    .overlay-content{
-        position: relative;
-        top: 25%;
-        width: 100%;
-        text-align: center;
-        margin-top: 3px;
-    }
-    .overlay a{
-        padding: 8px;
-        text-decoration: none;
-        font-size: 36px;
-        color: #818181;
-        display: block;
-        transition:0.3s;
-    }
-    .overlay a:hover, .overlay a:focus{
-        color: #f1f1f1;
-    }
-    .overlay, .closebtn{
-        position: absolute;
-        top: 20px;
-        right: 45px;
-        font-size: 60px;
-    }
-    span{
-        font-size: 30px;
-        cursor: pointer;
-    }
-    @media(max-height:450px){
-        .overlay a{font-size: 20px}
-        .overlay .closebtn{
-            font-size: 40px;
-            top: 15px;
-            right: 35px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        article {
+            margin: 0 auto;
+            max-width: 70%;
+            line-height: 1.5rem;
+            margin-top: 1rem;
+            padding: 2rem;
+            position: relative;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            padding: 1rem;
+        }
+
+        span#more {
+            display: none;
+        }
+
+        button {
+            border: none;
+            padding: 8px;
+            font-size: .9em;
+            cursor: pointer;
+            outline: none;
+        }
+
+        button:hover {
+            background: rgba(221, 221, 221, 0.739)
+        }
+
+        article .footer {
+            position: absolute;
+            right: 2.8rem;
+        }
     </style>
 </head>
+
 <body>
-    <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closenav()">&times; </a>
-        <div class="overlay-content">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+    <article>
+        <header>
+            <h1>title</h1>
+        </header>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores non vel deleniti molestias. Nemo,
+            accusamus eaque, expedita vel voluptatum voluptatibus magnam laudantium quod a ipsum id obcaecati facilis,
+            magni similique. <span id="dots">....</span> <span id="more">Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Eligendi dicta error esse dolorem. Ut rem ex officiis quo possimus atque. Animi,
+                ipsam! Dolor accusantium in vero architecto quam quisquam earum.</span>
+        </p>
+        <div class="footer">
+            <button onclick="toggle()" id="readmore">read more</button>
         </div>
-    </div>
-    <h2>Personal Site</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae natus possimus et architecto nemo, sequi fuga culpa, ipsa molestias, dicta quibusdam incidunt aperiam aliquam neque dolores vitae nostrum laborum?</p>
-    <span onclick="opennav()">&#9776; open</span>
+    </article>
     <script>
-    function opennav(){
-        document.getElementById("myNav").style.width="100%";
-    }
-    function closenav(){
-        document.getElementById("myNav").style.width="0%";
+    function toggle(){
+        let dots=document.getElementById("dots");
+        let moretext=document.getElementById("more");
+        let btnreadmore=document.getElementById("readmore");
+        if(dots.style.display==="none"){
+            dots.style.display="inline";
+            btnreadmore.innerText="read more";
+            moretext.style.display="none";
+        }else{
+            dots.style.display="none";
+            btnreadmore.innerText="read less";
+            moretext.style.display="inline";
+
+        }
     }
     </script>
 </body>
+
 </html>
