@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="mySlides fade">
+            <div class="numbertext">1/6</div>
+            <img src="images/montain1.jpg" >
+            <button class="btn">ok</button>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2/6</div>
+            <img src="images/montain2.jpg" >
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3/6</div>
+            <img src="images/montain3.jpg" >
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4/6</div>
+            <img src="images/montain4.jpg" >
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">5/6</div>
+            <img src="images/montain5.jpg" >
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">6/6</div>
+            <img src="images/montain6.jpg" >
+        </div>
+        
+        <a  class="prev" onclick="plusSlides(-1)"><i class="fas fa-angle-left"></i></a>
+        <a  class="next" onclick="plusSlides(1)"><i class="fas fa-angle-right"></i></a>
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="images/montain1-small.jpg" alt="khoshnam farm in fardis" onclick="currentSlide(1)" class="demo cursor">
+            </div>
+            <div class="column">
+                <img src="images/montain2-small.jpg" alt="chaloos montain in north" onclick="currentSlide(2)" class="demo cursor">
+            </div>
+            <div class="column">
+                <img src="images/montain3-small.jpg" alt="shomal river in shomal" onclick="currentSlide(3)" class="demo cursor">
+            </div>
+            <div class="column">
+                <img src="images/montain4-small.jpg" alt="koohe-nor in karadje" onclick="currentSlide(4)" class="demo cursor">
+            </div>
+            <div class="column">
+                <img src="images/montain5-small.jpg" alt="chaman ave. in mehrshar" onclick="currentSlide(5)" class="demo cursor">
+            </div>
+            <div class="column">
+                <img src="images/montain6-small.jpg" alt="taleghan lake block" onclick="currentSlide(6)" class="demo cursor">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
